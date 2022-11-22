@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      href="https://bcw.blob.core.windows.net/public/img/9977764104160066"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"
+      integrity="sha512-fXnjLwoVZ01NUqS/7G5kAnhXNXat6v7e3M9PhoMHOTARUMCaf5qNO84r5x9AFf5HDzm3rEZD8sb/n6dZ19SzFA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/style/main.css" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <title>trivia-night</title>
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-dark navbar-expand bg-dark text-light no-select"
+      >
+        <a class="navbar-brand ms-3" href="#">
+          <img
+            src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png"
+            height="45"
+            alt=""
+            loading="lazy"
+          />
+          <span class="ms-2">Trivia-Night</span>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <!-- SECTION Trivia Options -->
+        <section class="row justify-content-evenly p-3">
+          <button
+            class="col-3 btn btn-success"
+            onclick="app.cardsController.getTriviaCards('easy')"
+          >
+            Easy
+          </button>
+          <button
+            class="col-3 btn btn-primary"
+            onclick="app.cardsController.getTriviaCards('medium')"
+          >
+            Medium
+          </button>
+          <button
+            class="col-3 btn btn-danger"
+            onclick="app.cardsController.getTriviaCards('hard')"
+          >
+            Hard
+          </button>
+        </section>
+        <section class="row">
+          <h1 class="text-center m-1">
+            TOP Score: <span id="top-score">0</span>
+          </h1>
+        </section>
+        <!-- SECTION card for question -->
+        <section class="row justify-content-around" id="active-card">
+          <!-- <div class="col-4 bg-darktext-center p-3">
+            <h3 class="text-center">Question</h3>
+            <input class="text-start" type="radio" name="true"/><label for="html">True</label><br>
+            <input class="text-start" type="radio" name="False"/><label for="html">False</label>
+            <p>Correct answer</p>
+          </div> -->
+        </section>
+      </div>
+    </main>
+    <footer class="bg-dark text-light">
+      <div class="text-center no-select">
+        <p><small>Made with 💖 by CodeWorks</small></p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+      integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="app/App.js" type="module"></script>
+  </body>
+</html>
